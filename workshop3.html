@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="./assets/icon/javascriptSchool_icon.png">
+    <link rel="stylesheet" href="./assets/css/workshopStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller 3</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="./assets/icon/platzi2_icon.png" alt="icon">
+                <img src="./assets/icon/platzi_icon.png" alt="icon">
+                <img src="./assets/icon/javascriptSchool_icon.png" alt="icon">
+                <h1>Escuela de JavaScript</h1>
+            </div>
+            <div>
+                <a href="./index.html">Inicio</a>
+            </div>
+        </nav>    
+    </header>
+    <main>
+        <section> <!-- Calculation Section--->
+            <div>
+                <img src="./assets/icon/stadictics_icon.png" alt="icon">
+                <h1>Media aritm&eacute;tica, moda y mediana</h1>
+            </div>
+            <div>
+                <div>
+                    <img src="./assets/icon/stadictics_icon.png" alt="icon">
+                    <p>Resultado: <b id="inputValue"></b></p>
+                </div>
+                <div>
+                    <p>Tipo de Operaci&oacute;n:</p>
+                    <select name="operationType" id="operationType">
+                        <option value="arithmeticAverage">Media Aritm&eacute;tica</option>
+                        <option value="mode">Moda</option>
+                        <option value="median">Mediana</option>
+                        <option value="geometricMedian">Media Geom&eacute;tica</option>
+                    </select>
+                </div>
+                <div>
+                    <h1>Lista de Valores</h1>
+                    <ul style="list-style: none;" id="viewList"></ul>    
+                </div>
+                <div>
+                    <form>
+                        <div>
+                            <label for="value">A&ntilde;ade un <b>valor</b> o <b>posici&oacute;n:</b></label>
+                            <input style="display: block;" id="value" type="number">
+                            <button style="background-color: green; display: block;" type="button" onclick="addList()">Agregar <b>valor</b></button>
+                            <button style="background-color: red; display: block;" type="button" onclick="removeList()">Eliminar <b>posici&oacute;n</b></button>
+                        </div> 
+                        <div>  
+                            <button type="button" onclick="calculator()">Calcular</button>
+                        </div>    
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+           <p>De Latam <img src="./assets/icon/platzi_icon.png" alt=""> para el mundo</p>
+        </div>
+    </footer>
+    <script src="./assets/js/workshop3.js"></script>   
+</body>
+</html>

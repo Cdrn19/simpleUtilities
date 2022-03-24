@@ -16,7 +16,7 @@ function discountApplied(value, porcentage) {
 // =========================
 
 // ARRAY
-var coupons = ["AprenderEsGratis", "NuncaParesDeApreder", "EducacionOnlineEfectiva"];
+var coupons = ["AprenderEsGratis", "NuncaParesDeAprender", "EducacionOnlineEfectiva"];
 
 function discountCoupon(coupon) {
 
