@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="./assets/icon/javascriptSchool_icon.png">
+    <link rel="stylesheet" href="./assets/css/workshopStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller 2</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="./assets/icon/platzi2_icon.png" alt="icon">
+                <img src="./assets/icon/platzi_icon.png" alt="icon">
+                <img src="./assets/icon/javascriptSchool_icon.png" alt="icon">
+                <h1>Escuela de JavaScript</h1>
+            </div>
+            <div>
+                <a href="./index.html">Inicio</a>
+            </div>
+        </nav>    
+    </header>
+    <main>
+        <section> <!-- Discount Section--->
+            <div>
+                <img src="./assets/icon/discount_icon.png" alt="icon">
+                <h1>Porcentajes y Descuentos</h1>
+            </div>
+            <div>
+                <div>
+                    <img src="./assets/icon/discount_icon.png" alt="icon">
+                    <p>Monto: <b id="inputValue"></b></p>
+                    <p>Monto a Descontar: <b id="discountValue"></b></p>
+                    <p>Monto total con Descuento: <b id="result"></b></p>
+                </div>
+                <div>
+                    <form>
+                        <input style="display: block;" id="coupon" type="text" placeholder="cup&oacute;n de descuento">
+                        <label for="value">Monto o valor en moneda local</label>
+                        <input id="value" type="number">
+                        <label for="porcentage">Porcentaje de Descuento</label>
+                        <input id="porcentage" type="number">
+                        <button type="button" onclick="calculator()">Calcular</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+           <p>De Latam <img src="./assets/icon/platzi_icon.png" alt=""> para el mundo</p>
+        </div>
+    </footer>
+    <script src="./assets/js/workshop2.js"></script>   
+</body>
+</html>
