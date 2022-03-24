@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="./assets/icon/javascriptSchool_icon.png">
+    <link rel="stylesheet" href="./assets/css/workshopStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 1</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="./assets/icon/platzi2_icon.png" alt="icon">
+                <img src="./assets/icon/platzi_icon.png" alt="icon">
+                <img src="./assets/icon/javascriptSchool_icon.png" alt="icon">
+                <h1>Escuela de JavaScript</h1>
+            </div>
+            <div>
+                <a href="./index.html">Inicio</a>
+            </div>
+        </nav>    
+    </header>
+    <main>
+        <section> <!-- Section Triangle --->
+            <div>
+                <img src="./assets/icon/equilateralTriangle_icon.png" alt="icon">
+                <h1>Tri&aacute;ngulos</h1>
+            </div>
+            <div>
+                <div>
+                    <img src="./assets/icon/equilateralTriangle_icon.png" alt="">
+                    <p>&Aacute;rea: <b id="areaTriangle"></b></p>
+                    <img src="./assets/icon/equilateralTriangle_icon.png" alt="">
+                    <p>Per&iacute;metro: <b id="perimeterTriangle"></b></p>
+                    <img src="./assets/icon/equilateralTriangle_icon.png" alt="">
+                    <p>Altura: <b id="heightTriangle"></b></p>
+                </div>
+                <div>
+                    <form>
+                        <label for="sideATriangle">Lado A</label>
+                        <input id="sideATriangle" type="number">
+                        <label for="sideBTriangle">Lado B</label>
+                        <input id="sideBTriangle" type="number">
+                        <label for="sideCTriangle">Lado C</label>
+                        <input id="sideCTriangle" type="number">
+                        <button type="button" onclick="InputTriangle()">Calcular</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section> <!-- Section Square --->
+            <div>
+                <img src="./assets/icon/square_icon.png" alt="icon">
+                <h1>Cuadrados y Rect&aacute;ngulos</h1>
+            </div>
+            <div>
+                <div>
+                    <img src="./assets/icon/square_icon.png" alt="">
+                    <p>&Aacute;rea: <b id="areaSquare areaRectangle"></b></p>
+                    <img src="./assets/icon/square_icon.png" alt="">
+                    <p>Per&iacute;metro: <b id="perimeterSquare perimeterRectangle"></b></p>
+                </div>
+                <div>
+                    <form action="">
+                        <label for="sideASquare">Lado A</label>
+                        <input type="number" id="sideASquare">
+                        <label for="sideBSquare">Lado B</label>
+                        <input type="number" id="sideBSquare">
+                        <button type="button" onclick="InputSquare()">Calcular</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section> <!-- Section Circle --->
+            <div>
+                <img src="./assets/icon/circle_icon.png" alt="icon">
+                <h1>Circulos</h1>
+            </div>
+            <div>
+                <div>
+                    <img src="./assets/icon/circle_icon.png" alt="">
+                    <p>&Aacute;rea: <b id="areaCircle"></b></p>
+                    <img src="./assets/icon/circle_icon.png" alt="">
+                    <p>Per&iacute;metro:<b id="perimeterCircle"></b></p>
+                    <img src="./assets/icon/circle_icon.png" alt="">
+                    <p>Di&aacute;metro: <b id="diameterCircle"></b></p>
+                </div>
+                <div>
+                    <form action="">
+                        <label for="radioCircle">Radio</label>
+                        <input type="number" id="radioCircle">
+                        <button type="button" onclick="InputCircle()">Calcular</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+           <p>De Latam <img src="./assets/icon/platzi_icon.png" alt=""> para el mundo</p>
+        </div>
+    </footer>
+    <script src="./assets/js/workshop1.js"></script>   
+</body>
+</html>
