@@ -9,64 +9,70 @@ function arithmeticAverage(list) {
     ) / list.length;
 };
 
-//     == ARITHMETIC MODE ==
-
-const listCount = {};  
-
-function mode(list) {
-
-    list.map(
-        function (element) {
-            if (listCount[element]) {
-                listCount[element] += 1;
-            } else {
-                listCount[element] = 1;
-            }
-    });
-    const listArray = Object.entries(listCount).sort(
-        function (elementA, elementB) {
-            return elementA[1] - elementB[1];
-    });
-    return listArray[listArray.length - 1][0];
-};
-
 //     == ARITHMETIC MEDIAN ==
 
 function median(list) {
- 
-    let listHalf = parseInt(list.length / 2);
+
+    listHalf = parseInt(list.length / 2);
     list = list.sort(function(a, b){return a - b});
-    
+
     function valuePair(list) {
         return list.length % 2 == 0 ? true : false;   
     };
 
-    if (valuePair(list) == true ) {
+    if (valuePair(list) == true ) { 
         let elementA = list[listHalf - 1];
         let elementB = list[listHalf];
          return arithmeticAverage([elementA, elementB]);
     } else {
         return list[listHalf];
     };
-}
+};
 
-//     == GEOMETRIC MEDIAN ==
+//     == TOP 10% MEDiAN ==
 
-function geometricMedian(list) {
-    let index = list.length;
-    
-    let filing = list.reduce(function (accumulatedValue,currentValue){
-        return accumulatedValue * currentValue
-    });
+function topMedian(list) {
 
-    return (filing ** (1/index)).toFixed(3);
+    list.sort(function(a, b){return a - b});
+
+    var spliceStart = (list.length * 90) / 100 ;
+    var spliceCount = list.length - spliceStart;
+    list = list.splice(spliceStart, spliceCount);
+
+    return arithmeticAverage(list);
 };
 
 // STOCK INPUT CALLS
 // =========================
 
 // Array 
-list = [];
+const salaryVen = [ { name: "Carlos", salary: 1225 }, 
+                    { name: "Juan", salary: 134 },
+                    { name: "Marcos", salary: 345 },
+                    { name: "Eillen", salary: 246 },
+                    { name: "Cesar", salary: 1568 },
+                    { name: "Armando", salary: 1565 },
+                    { name: "Alicia", salary: 1456 },
+                    { name: "Luisa", salary: 204 },
+                    { name: "Edith", salary: 1276 },
+                    { name: "Daniel", salary: 325 },
+                    { name: "Bill", salary: 101000 },
+];
+
+var list = [];
+
+// Select default list 
+function selectList(salaryVen) {
+    if (list == 0) {
+        return salaryVen.map(
+            function (defalutList){
+                return list = defalutList.salary;
+            }
+        );
+    } else {
+        return list;
+    };
+};
 
 //     == VIEW LIST ==
 function viewList(list) {
@@ -99,7 +105,7 @@ function removeList() {
     if (value == 0 || "") {
         alert("Necesitamos una posicion para borrar el valor");
     } else {
-        list.splice((value-1), 1);
+        list.splice(value - 1, 1);
         viewList(list);
     };
 };
@@ -108,24 +114,20 @@ function removeList() {
 function calculator() {
     const operationType = document.getElementById("operationType").value; 
 // Data type validation
-    if (list.length != 0) {
-        switch ( operationType != "") {
-            case (operationType == "arithmeticAverage"):
-                document.getElementById("inputValue").innerText = arithmeticAverage(list);
-                break;
-            case operationType == "mode":
-                document.getElementById("inputValue").innerText = mode(list);
-                break;
-            case operationType == "median":
-                document.getElementById("inputValue").innerText = median(list);
-                break; 
-            case operationType == "geometricMedian":
-                document.getElementById("inputValue").innerText = geometricMedian(list);
-                break;     
-            default:
-                alert("Necesitamos un tipo de operacion");
-        };
+    if (list == 0) {
+        list = selectList(salaryVen);
+        viewList(list);
     } else {
-        alert("Necesitamos valores validos")
+        list;
+    };    
+    switch ( operationType != "") {
+        case operationType == "median":
+            document.getElementById("inputValue").innerText = median(list);
+            break;
+        case operationType == "topMedian":
+            document.getElementById("inputValue").innerText = topMedian(list);
+            break;                 
+        default:
+            alert("Necesitamos un tipo de operacion");
     };
-};
+};    

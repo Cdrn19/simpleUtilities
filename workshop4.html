@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="./assets/icon/javascriptSchool_icon.png">
+    <link rel="stylesheet" href="./assets/css/workshopStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller 4</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="./assets/icon/platzi2_icon.png" alt="icon">
+                <img src="./assets/icon/platzi_icon.png" alt="icon">
+                <img src="./assets/icon/javascriptSchool_icon.png" alt="icon">
+                <h1>Escuela de JavaScript</h1>
+            </div>
+            <div>
+                <a href="./index.html">Inicio</a>
+            </div>
+        </nav>    
+    </header>
+    <main>
+        <section> <!-- Calculation Section--->
+            <div>
+                <img src="./assets/icon/salary_icon.png" alt="icon">
+                <h1>An&aacute;lisis Salarial</h1>
+            </div>
+            <div>
+                <div>
+                    <img src="./assets/icon/salary_icon.png" alt="icon">
+                    <p>Resultado: <b id="inputValue"></b></p>
+                </div>
+                <div>
+                    <p>Tipo de Operaci&oacute;n:</p>
+                    <select name="operationType" id="operationType">
+                        <option value="median">Mediana</option>
+                        <option value="topMedian">Mediana Salarial TOP 10%</option>
+                    </select>
+                </div>
+                <section style="display: grid; grid-template-columns: 1fr 1fr;">
+                    <div>
+                        <h1>Lista de Valores</h1>
+                        <ul style="list-style: none;" id="viewList"></ul>    
+                    </div>
+                    <div>
+                        <h1 id="viewList2">Lista de Valores (Opcional)</h1>
+                        <ul style="list-style: none;" id="viewList2">
+                            <li>Carlos 1225 USD</li>
+                            <li>Juan 134 USD</li>
+                            <li>Marcos 345 USD</li>
+                            <li>Eilleen 246 USD </li>
+                            <li>Cesar 1568 USD</li>
+                            <li>Armando 1565 USD</li>
+                            <li>Alicia 1456 USD</li>
+                            <li>Luisa 204 USD</li>
+                            <li>Edith 1276 USD</li>
+                            <li>Daniel 325 USD</li>
+                            <li>Bill 101000 USD</li>
+                        </ul>    
+                    </div>
+                </section>    
+                <div>
+                    <form>
+                        <div>
+                            <label for="value">A&ntilde;ade un <b>valor</b> o <b>posici&oacute;n:</b></label>
+                            <input style="display: block;" id="value" type="number">
+                            <button style="background-color: green; display: block;" type="button" onclick="addList()">Agregar <b>valor</b></button>
+                            <button style="background-color: red; display: block;" type="button" onclick="removeList()">Eliminar <b>posici&oacute;n</b></button>
+                        </div> 
+                        <div>  
+                            <button type="button" onclick="calculator()">Calcular</button>
+                        </div>    
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+           <p>De Latam <img src="./assets/icon/platzi_icon.png" alt=""> para el mundo</p>
+        </div>
+    </footer>
+    <script src="./assets/js/workshop4.js"></script>   
+</body>
+</html>
